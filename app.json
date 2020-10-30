@@ -4,9 +4,9 @@
     "slug": "UrbanFreshGrocers",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "../app/assets/icon.png",
+    "icon": "./app/assets/icon.png",
     "splash": {
-      "image": "../app/assets/icon.png",
+      "image": "./app/assets/splash.png",
       "resizeMode": "contain",
       "backgroundColor": "#e63c4b"
     },
@@ -17,16 +17,26 @@
       "**/*"
     ],
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.vxworkflow.urbanfresh",
+      "buildNumber": "1.0.0"
     },
     "android": {
-      "adaptiveIcon": {
-        "foregroundImage": "./assets/adaptive-icon.png",
-        "backgroundColor": "#FFFFFF"
+      "package": "com.codewithmosh.donewithit",
+      "versionCode": 1
+    },
+    "extra": {
+      "bugsnag": {
+        "apiKey": "0491cfab256c48a08e7eb4afd0970887"
       }
     },
-    "web": {
-      "favicon": "./assets/favicon.png"
+    "hooks": {
+      "postPublish": [
+        {
+          "file": "@bugsnag/expo/hooks/post-publish.js",
+          "config": {}
+        }
+      ]
     }
   }
 }
