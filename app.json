@@ -22,7 +22,7 @@
       "buildNumber": "1.0.0"
     },
     "android": {
-      "package": "com.codewithmosh.donewithit",
+      "package": "com.vxworkflow.urbanfresh",
       "versionCode": 1
     },
     "extra": {
